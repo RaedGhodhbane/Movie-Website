@@ -1,0 +1,21 @@
+<div class=" row border-style">
+  <h3> My watchList </h3>
+  <div class="row">
+    <div class="col-md-12 card mb-3" style="max-width: 540px;" *ngFor='let movie of watchList'>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{movie.Poster}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title"> {{movie.Title}} </h3>
+              <p class="card-text"><small class="text-muted"> {{movie.Year}} - {{movie.Type}} </small></p>
+              <button type="button" class="btn btn-warning">Détail</button>
+              <button type="button" class="btn btn-danger" (click)="delete(movie.imdbID)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
